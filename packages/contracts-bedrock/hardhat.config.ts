@@ -55,13 +55,21 @@ const config: HardhatUserConfig = {
       accounts: [process.env.PRIVATE_KEY_DEPLOYER || ethers.constants.HashZero],
     },
     goerli: {
-      chainId: 5,
+      chainId: 11155111,
       url: process.env.L1_RPC || '',
       accounts: [process.env.PRIVATE_KEY_DEPLOYER || ethers.constants.HashZero],
       companionNetworks: {
         l2: 'optimism-goerli',
       },
     },
+    // sepolia: {
+    //   chainId: 11155111,
+    //    url: process.env.L1_RPC || '',
+    //   accounts: [process.env.PRIVATE_KEY_DEPLOYER || ethers.constants.HashZero],
+    //   companionNetworks: {
+    //     l2: 'optimism-goerli',
+    //   },
+    // },
     'optimism-goerli': {
       chainId: 420,
       url: process.env.L2_RPC || '',
@@ -71,7 +79,7 @@ const config: HardhatUserConfig = {
       },
     },
     'alpha-1': {
-      chainId: 5,
+      chainId: 11155111,
       url: process.env.L1_RPC || '',
       accounts: [process.env.PRIVATE_KEY_DEPLOYER || ethers.constants.HashZero],
     },
@@ -88,25 +96,31 @@ const config: HardhatUserConfig = {
       live: false,
     },
     'goerli-forked': {
-      chainId: 5,
+      chainId: 11155111,
       url: process.env.L1_RPC || '',
       accounts: [process.env.PRIVATE_KEY_DEPLOYER || ethers.constants.HashZero],
       live: true,
     },
     'final-migration-rehearsal': {
-      chainId: 5,
+      chainId: 11155111,
       url: process.env.L1_RPC || '',
       accounts: [process.env.PRIVATE_KEY_DEPLOYER || ethers.constants.HashZero],
       live: true,
     },
     'internal-devnet': {
-      chainId: 5,
+      chainId: 11155111,
       url: process.env.L1_RPC || '',
       accounts: [process.env.PRIVATE_KEY_DEPLOYER || ethers.constants.HashZero],
       live: true,
     },
     'getting-started': {
-      chainId: 5,
+      chainId: 11155111,
+      url: process.env.L1_RPC || '',
+      accounts: [process.env.PRIVATE_KEY_DEPLOYER || ethers.constants.HashZero],
+      live: true,
+    },
+     'sepolia': {
+      chainId: 11155111,
       url: process.env.L1_RPC || '',
       accounts: [process.env.PRIVATE_KEY_DEPLOYER || ethers.constants.HashZero],
       live: true,
